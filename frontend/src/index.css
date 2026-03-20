@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply antialiased;
+    font-family: 'Geist', 'Inter', system-ui, sans-serif;
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-slate-300 dark:bg-slate-600 rounded-full;
+  }
+}
+
+@layer components {
+  .badge {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium;
+  }
+  .card {
+    @apply rounded-xl border bg-white dark:bg-od-bg2 dark:border-od-border shadow-sm;
+  }
+  .btn {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-lg font-medium text-sm transition-all disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-primary {
+    @apply btn bg-amber-500 hover:bg-amber-600 text-white;
+  }
+  .btn-secondary {
+    @apply btn bg-slate-100 hover:bg-slate-200 text-slate-800 dark:bg-od-border dark:hover:bg-slate-600 dark:text-od-fg;
+  }
+  .btn-ghost {
+    @apply btn hover:bg-slate-100 text-slate-700 dark:hover:bg-od-border dark:text-od-fg;
+  }
+}

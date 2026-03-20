@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find s:codeprojectswhatsapp-syncbackend -not -path *.venv* -type d)"
+    ]
+  }
+}

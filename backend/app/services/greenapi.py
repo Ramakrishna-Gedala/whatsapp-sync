@@ -53,8 +53,9 @@ class GreenAPIService:
     async def get_chat_history(self, chat_id: str, count: int = 20) -> list[dict]:
         url = self._url("getChatHistory")
         logger.info(f"Fetching chat history for {chat_id}, count={count}")
+        logger.info(f"Green API URL: {url}")
         try:
-            async with httpx.AsyncClient(limits=_limits, timeout=30) as client:
+            async with httpx.AsyncClient(limits=_limits, timeout=3000) as client:
                 response = await client.post(
                     url, json={"chatId": chat_id, "count": count}
                 )

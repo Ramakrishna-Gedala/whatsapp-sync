@@ -10,7 +10,7 @@ class Settings(BaseSettings):
     GREEN_API_TOKEN: str
     OPENAI_API_KEY: str
     OPENAI_MODEL: str = "gpt-4o-mini"
-    GREEN_API_BASE_URL: str = "https://api.green-api.com"
+    GREEN_API_BASE_URL: str = "https://7107.api.greenapi.com"
     LOG_LEVEL: str = "INFO"
     CORS_ORIGINS: List[str] = ["http://localhost:5173"]
 

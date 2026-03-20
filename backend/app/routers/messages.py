@@ -30,6 +30,7 @@ async def process_group_messages(
         green_api_service.get_chat_history(group_id, count=request.limit),
     )
     group_name = next((g["name"] for g in groups if g["id"] == group_id), group_id)
+    logger.info(f"=========== Fetched {len(messages)} messages for group '{group_name}' ({group_id})")
 
     if not messages:
         return {

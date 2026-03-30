@@ -1,6 +1,6 @@
-# PropSync — WhatsApp Real Estate Event Manager
+# WhatsApp Sync — Event Management Platform
 
-A full-stack application that ingests WhatsApp messages from property management groups, processes them through OpenAI for intelligent event extraction, and presents structured events in a dashboard for property managers.
+A full-stack application that ingests messages from WhatsApp groups, leverages OpenAI-based LLMs for intelligent event extraction, and transforms unstructured conversations into structured, actionable events presented through a centralized dashboard for property managers.
 
 ---
 
